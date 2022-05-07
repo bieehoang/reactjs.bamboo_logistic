@@ -9,5 +9,5 @@ app.get('/api/products', (req, res) => {
 
 const port = process.env.PORT || 2000;
 app.listen(port, () => {
-  console.log(`server at http://localhost:${port}`);
+  console.log(`see me http://localhost:${port}`);
 });
