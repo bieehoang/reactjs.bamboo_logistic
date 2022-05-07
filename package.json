@@ -1,0 +1,20 @@
+{
+  "name": "bamboologistics",
+  "description": "1. STUDY\r 2. PRACTICE\r 3. CODE\r 4. REVIEW\r 5. GET DONE",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qiese/bamboologistics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Qiese/bamboologistics/issues"
+  },
+  "homepage": "https://github.com/Qiese/bamboologistics#readme"
+}

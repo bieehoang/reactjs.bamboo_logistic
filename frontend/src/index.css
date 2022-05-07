@@ -11,8 +11,33 @@ header {
   padding: 1rem;
   background-color: #404040;
 }
+
 header a {
   color: #ffd154;
   font-weight: bold;
   text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid #333;
+  margin: 1rem;
+}
+
+.product img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.product-infor {
+  padding: 1rem;
 }
