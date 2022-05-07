@@ -7,8 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.site-container {
+  min-height: 100vh;
+}
+
 main {
-  padding: 1rem;
+  flex: 1;
 }
 
 .products {
