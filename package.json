@@ -3,7 +3,10 @@
   "description": "1. STUDY\r 2. PRACTICE\r 3. CODE\r 4. REVIEW\r 5. GET DONE",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "start": "cross-env PORT=8000 react-scripts start",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

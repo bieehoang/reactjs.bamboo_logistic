@@ -24,12 +24,13 @@ function HomeScreen() {
     error: '',
   });
   //USE AXIOS TO FETCH DATA FROM BACKEND
-  //const [products, setProducts] = useState([]);
+  const [setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api/products');
+        setProducts(result.data);
         dispatch({
           type: 'FETCH_SUCCESS',
           payload: result.data,
@@ -40,7 +41,6 @@ function HomeScreen() {
           payload: err.message,
         });
       }
-      //setProducts(result.data);
     };
     fetchData();
   }, []);
