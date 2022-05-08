@@ -13,7 +13,7 @@ function Product(props) {
         <Link to={`/product/${product.slug}`}>
           <Card.Title>{product.name}</Card.Title>
         </Link>
-        <Ratings rating={product.rating} numReviews={product.numReviews} />
+        <Ratings rating={product.rating} numReviews={product.numberReviews} />
         <Card.Text>${product.price}</Card.Text>
         <Button>Add to cart</Button>
       </Card.Body>
