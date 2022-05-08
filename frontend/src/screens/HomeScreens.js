@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect, useReducer } from 'react';
 import logger from 'use-reducer-logger';
@@ -32,7 +32,7 @@ function HomeScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const result = await axios.get('/api/products');
-        //setProducts(result.data);
+        setProducts(result.data);
         dispatch({
           type: 'FETCH_SUCCESS',
           payload: result.data,
