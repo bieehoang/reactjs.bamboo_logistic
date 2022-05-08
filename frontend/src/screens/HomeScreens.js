@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useState, useEffect, useReducer } from 'react';
 import logger from 'use-reducer-logger';
 import data from '../data';
+import { Row, Col } from 'react-bootstrap';
+import Product from '../components/Product';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -51,24 +53,13 @@ function HomeScreen() {
       <main>
         <h1>Products</h1>
         <div className="products">
-          {data.products.map((product) => (
-            <div className="product" key={product.slug}>
-              <Link to={`/product/${product.slug}`}>
-                <img src={product.img} alt={product.name} />
-              </Link>
-              <div className="product-infor">
-                <Link to={`/product/${product.slug}`}>
-                  <p>{product.name}</p>
-                </Link>
-                <span>
-                  <strong>
-                    <p>{product.price}</p>
-                  </strong>
-                </span>
-                <button>Add to cart</button>
-              </div>
-            </div>
-          ))}
+          <Row>
+            {data.products.map((product) => (
+              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                <Product product={product}></Product>
+              </Col>
+            ))}
+          </Row>
         </div>
       </main>
     </div>
