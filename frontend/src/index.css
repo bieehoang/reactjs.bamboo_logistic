@@ -15,13 +15,23 @@ main {
   flex: 1;
 }
 
+.navbar-dark .navbar-brand {
+  color: #ffd154 !important;
+  text-transform: uppercase !important;
+  font-weight: 500;
+}
+
 .btn-primary {
-  background-color: #f0c040;
-  color: #000000;
+  background-color: #f0c040 !important;
+  color: #000000 !important;
 }
 
 .rating span {
   color: #ffc000;
+}
+
+.card a {
+  text-decoration: none;
 }
 
 .products {
@@ -42,4 +52,19 @@ main {
 
 .product-infor {
   padding: 1rem;
+}
+
+/* ProductScreen  */
+
+/* text-skip */
+.screen-skip {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 50%;
+  text-transform: uppercase;
+}
+
+/* Img */
+.img-larger {
+  max-width: 100%;
 }

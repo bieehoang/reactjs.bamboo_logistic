@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Qiese/bamboologistics/issues"
   },
-  "homepage": "https://github.com/Qiese/bamboologistics#readme"
+  "homepage": "https://github.com/Qiese/bamboologistics#readme",
+  "dependencies": {
+    "react-helmet-async": "^1.3.0"
+  }
 }
