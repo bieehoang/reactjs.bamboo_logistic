@@ -24,6 +24,12 @@ main {
 .btn-primary {
   background-color: #f0c040 !important;
   color: #000000 !important;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  background-color: #3d3d3d !important;
+  color: #ffd154 !important;
 }
 
 .rating span {
@@ -32,6 +38,10 @@ main {
 
 .card a {
   text-decoration: none;
+}
+
+.card a:hover {
+  color: #333;
 }
 
 .products {
@@ -60,7 +70,7 @@ main {
 .screen-skip {
   font-size: 50px;
   text-align: center;
-  margin-top: 50%;
+  margin-top: 40%;
   text-transform: uppercase;
 }
 
