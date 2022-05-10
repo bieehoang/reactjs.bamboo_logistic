@@ -9,6 +9,7 @@ import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 import Rating from '../components/Rating';
 import { Helmet } from 'react-helmet-async';
+import { ListGroupItem } from 'react-bootstrap';
 //FECTH DATA FROM BACKEND
 const reducer = (state, action) => {
   switch (action.type) {
@@ -62,36 +63,35 @@ function ProductScreen() {
       <Row>
         <Col md={6}>
           <img
-            className="img-large"
-            src={product.image}
+            className="img-larger"
+            src={product.img}
             alt={product.name}
           ></img>
         </Col>
         <Col md={3}>
-          <ListGroup variant="flush">
+          <ListGroup>
             <ListGroup.Item>
-              <Helmet>
-                <title>{product.name}</title>
-              </Helmet>
+              <title>{product.name}</title>
               <h1>{product.name}</h1>
             </ListGroup.Item>
+          </ListGroup>
+          <ListGroup>
             <ListGroup.Item>
               <Rating
                 rating={product.rating}
-                numReviews={product.numReviews}
+                numReviews={product.numberReviews}
               ></Rating>
-            </ListGroup.Item>
-            <ListGroup.Item>Pirce : ${product.price}</ListGroup.Item>
-            <ListGroup.Item>
-              Description:
-              <p>{product.description}</p>
+              <ListGroup.Item>Price: {product.price} $ </ListGroup.Item>
+              <ListGroup.Item>
+                Description: {product.description}
+              </ListGroup.Item>
             </ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={3}>
           <Card>
             <Card.Body>
-              <ListGroup variant="flush">
+              <ListGroup>
                 <ListGroup.Item>
                   <Row>
                     <Col>Price:</Col>
@@ -100,23 +100,16 @@ function ProductScreen() {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Status:</Col>
+                    <Col>Status</Col>
                     <Col>
                       {product.countInStock > 0 ? (
-                        <Badge bg="success">In Stock</Badge>
+                        <Badge bg="success">Instock</Badge>
                       ) : (
-                        <Badge bg="danger">Unavailable</Badge>
+                        <Badge bg="danger">Unvailable</Badge>
                       )}
                     </Col>
                   </Row>
                 </ListGroup.Item>
-                {product.countInStock > 0 && (
-                  <ListGroup.Item>
-                    <div className="d-grid">
-                      <Button variant="primary">Add to Cart</Button>
-                    </div>
-                  </ListGroup.Item>
-                )}
               </ListGroup>
             </Card.Body>
           </Card>

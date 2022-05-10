@@ -18,7 +18,7 @@ const data = {
       category: 'Motor Detail',
       img: '/images/p2.png',
       price: '100',
-      countInStock: 10,
+      countInStock: 0,
       brand: 'L Bamboo',
       rating: 3.5,
       numberReviews: 10,
