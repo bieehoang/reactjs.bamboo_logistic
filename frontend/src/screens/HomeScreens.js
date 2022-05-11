@@ -6,6 +6,8 @@ import data from '../data';
 import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from './LoadingBox';
+import MessageBox from './MessageBox';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -55,14 +57,21 @@ function HomeScreen() {
         <Helmet>
           <title>BAMBOOLOGISTIC</title>
         </Helmet>
+        <h1>products</h1>
         <div className="products">
-          <Row>
-            {data.products.map((product) => (
-              <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
-                <Product product={product}></Product>
-              </Col>
-            ))}
-          </Row>
+          {loading ? (
+            <LoadingBox />
+          ) : error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+          ) : (
+            <Row>
+              {data.products.map((product) => (
+                <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
+                  <Product product={product}></Product>
+                </Col>
+              ))}
+            </Row>
+          )}
         </div>
       </main>
     </div>
